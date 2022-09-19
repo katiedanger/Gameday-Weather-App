@@ -25,6 +25,10 @@ li {
   line-height: 19px;
 }
 
+#description {
+  text-transform: capitalize;
+}
+
 a {
   text-decoration: none;
 }
