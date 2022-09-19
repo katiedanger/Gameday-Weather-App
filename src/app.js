@@ -38,6 +38,7 @@ function displayTemperature(response) {
 
 let apiKey = "6782253072f7d90462731a624097fc54";
 let units = "imperial";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Omaha&appid=${apiKey}&units=${units}`;
+let city = "Omaha";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(displayTemperature);
