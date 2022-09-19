@@ -43,9 +43,21 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "6782253072f7d90462731a624097fc54";
-let units = "imperial";
-let city = "Omaha";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+function search(city) {
+  let apiKey = "6782253072f7d90462731a624097fc54";
+  let units = "imperial";
 
-axios.get(apiUrl).then(displayTemperature);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault;
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Omaha");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
