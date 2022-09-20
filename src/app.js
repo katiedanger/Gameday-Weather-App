@@ -47,7 +47,7 @@ function displayTemperature(response) {
 }
 
 function search(city) {
-  let apiKey = "a867e25f2d83db579421a57fd8e937ec";
+  let apiKey = "3980a7c8f2a782241a093131b099f993";
   let units = "imperial";
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -88,4 +88,4 @@ celciusLink.addEventListener("click", displayCelciusTemperature);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-search("Omaha");
+search("Lincoln");
