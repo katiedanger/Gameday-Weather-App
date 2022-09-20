@@ -32,10 +32,27 @@ li:first-letter {
 
 a {
   text-decoration: none;
+  color: red;
 }
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+
+.logo {
+  text-align: center;
+}
+
+.main-image {
+  max-width: 70%;
+  margin-bottom: 10px;
+  opacity: 90%;
+}
+
+.slogan {
+  font-size: x-small;
+  margin-bottom: 20px;
 }
 
 .weather-app {
